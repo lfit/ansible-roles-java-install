@@ -1,2 +1,25 @@
 ---
-# tasks file for java-install
+- include_tasks: '{{item}}'
+  with_first_found:
+    - '{{ansible_distribution}}.yml'
+    - '{{ansible_os_family}}.yml'
+
+- name: Set Java 8 as default
+  block:
+    - name: Set java alternatives
+      alternatives:
+        name: java
+        link: /usr/bin/java
+        path: '{{java_path}}/bin/java'
+    - name: Set javac alternatives
+      alternatives:
+        name: javac
+        link: /usr/bin/javac
+        path: '{{java_path}}/bin/javac'
+    - name: Set java_sdk_openjdk alternatives
+      alternatives:
+        name: java_sdk_openjdk
+        link: /usr/lib/jvm/java-openjdk
+        path: '{{java_path}}/bin/java'
+  become: true
+
