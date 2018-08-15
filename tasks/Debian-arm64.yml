@@ -1,0 +1,17 @@
+---
+- apt_repository:
+    repo: 'ppa:openjdk-r/ppa'
+  become: true
+
+- name: Install Java 8 SDK
+  apt: name=openjdk-8-jdk state=present update_cache=yes
+  become: true
+
+- name: Install Java 9 SDK
+  apt: name=openjdk-9-jdk state=present update_cache=yes
+  become: true
+
+
+- name: Set Java path
+  set_fact:
+    java_path: /usr/lib/jvm/java-1.8.0-openjdk-arm64
