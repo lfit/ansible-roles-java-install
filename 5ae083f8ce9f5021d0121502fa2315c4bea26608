@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "493cc440_a85c5307",
+        "filename": "tasks/Debian-aarch64.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-08-16T19:31:48Z",
+      "side": 1,
+      "message": "According to the docs you can install the deb directly in one command with the apt module.\n\nhttps://docs.ansible.com/ansible/latest/modules/apt_module.html",
+      "revId": "5ae083f8ce9f5021d0121502fa2315c4bea26608",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    }
+  ]
+}
