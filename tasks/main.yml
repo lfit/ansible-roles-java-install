@@ -1,5 +1,8 @@
 ---
+- name: Installing Java for '{{ansible_architecture}}'
+
 - include_tasks: '{{item}}'
+
   with_first_found:
     - '{{ansible_os_family}}-{{ansible_architecture}}.yml'
     - '{{ansible_distribution}}.yml'
