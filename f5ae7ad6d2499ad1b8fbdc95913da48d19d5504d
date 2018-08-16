@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a2aa4e59_0448c0d7",
+        "filename": "tasks/Debian-arm64.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-08-16T04:53:44Z",
+      "side": 1,
+      "message": "Does this ppa support arm?\n\nThe point of this ppa was to add Java 9 support for x86 systems. I\u0027m not sure this PPA supports Arm systems?",
+      "range": {
+        "startLine": 3,
+        "startChar": 11,
+        "endLine": 3,
+        "endChar": 28
+      },
+      "revId": "f5ae7ad6d2499ad1b8fbdc95913da48d19d5504d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    }
+  ]
+}
