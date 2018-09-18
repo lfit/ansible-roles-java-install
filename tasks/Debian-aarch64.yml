@@ -7,13 +7,6 @@
   apt: name=openjdk-8-jdk state=present update_cache=yes
   become: true
 
-- name: Install Java 9 SDK
-  # openjdk-9 is not directly available via apt.  Point directly to a suitable
-  # deb and install.
-  apt:
-    deb: http://launchpadlibrarian.net/235290897/openjdk-9-jdk_9~b102-1_arm64.deb
-  become: true
-
 - name: Set Java path
   set_fact:
     java_path: /usr/lib/jvm/java-1.8.0-openjdk-arm64
