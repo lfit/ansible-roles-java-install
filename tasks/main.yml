@@ -22,4 +22,9 @@
         name: java_sdk_openjdk
         link: /usr/lib/jvm/java-openjdk
         path: '{{java_path}}/bin/java'
+    - name: Set java_sdk_openjdk alternatives
+      alternatives:
+        name: java_sdk_openjdk
+        link: /usr/lib/jvm/java-openjdk
+        path: '{{java_path}}/bin/java'
   become: true
