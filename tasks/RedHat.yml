@@ -3,6 +3,81 @@
   yum: name=java-*-openjdk-devel state=latest
   become: true
 
+- name: 'Check existing Java setup for OpenJDK {{openjdk10_version}}'
+  shell: 'alternatives --display java'
+  register: alt_config_openjdk_version
+- name: 'Debug Java Setup'
+  debug:
+    msg: '{{ alt_config_openjdk_version }}'
+
+- name: 'Install OpenJDK {{openjdk10_version}}'
+  block:
+    - name: 'Fetch OpenJDK {{openjdk10_version}} to /tmp/jdk-{{openjdk10_version}}_linux-x64_bin.tar.gz'
+      get_url:
+        url: "{{openjdk10_url}}"
+        dest: '/tmp/jdk-{{openjdk10_version}}_linux-x64_bin.tar.gz'
+        checksum: '{{openjdk10_checksum}}'
+    - name: 'Untar OpenJDK {{openjdk10_version}} in /opt/'
+      unarchive:
+        src: '/tmp/jdk-{{openjdk10_version}}_linux-x64_bin.tar.gz'
+        dest: /opt/
+        mode: 0755
+        remote_src: true
+      become: true
+    # - name: 'Check existing Java setup for OpenJDK {{openjdk10_version}}'
+    #   shell: 'echo "" | alternatives --config java'
+    #   register: alt_config_openjdk10_version
+    - name: 'Debug Java Setup'
+      debug:
+        msg: '{{ alt_config_openjdk10_version }}'
+    - name: 'Setup Java master and slave links for OpenJDK {{openjdk10_version}}'
+      command: 'alternatives --install "/usr/bin/java" "java" "/opt/jdk-{{openjdk10_version}}/bin/java" 10 \
+                --slave "/usr/bin/jar" "jar" "/opt/jdk-{{openjdk10_version}}/bin/jar" \
+                --slave "/usr/bin/jarsigner" "jarsigner" "/opt/jdk-{{openjdk10_version}}/bin/jarsigner" \
+                --slave "/usr/bin/javac" "javac" "/opt/jdk-{{openjdk10_version}}/bin/javac" \
+                --slave "/usr/bin/javadoc" "javadoc" "/opt/jdk-{{openjdk10_version}}/bin/javadoc" \
+                --slave "/usr/bin/javah" "javah" "/opt/jdk-{{openjdk10_version}}/bin/javah" \
+                --slave "/usr/bin/javap" "javap" "/opt/jdk-{{openjdk10_version}}/bin/javap" \
+                --slave "/usr/bin/javaws" "javaws" "/opt/jdk-{{openjdk10_version}}/bin/javaws"'
+      when: openjdk10_version not in alt_config_openjdk_version
+      # changed_when: false
+      # when: (alt_config_openjdk10_version.stdout.find(openjdk10_version) == -1)
+      become: true
+
+- name: 'Install OpenJDK {{openjdk11_version}}'
+  block:
+    - name: 'Fetch OpenJDK {{openjdk11_version}} to /tmp/jdk-{{openjdk11_version}}_linux-x64_bin.tar.gz'
+      get_url:
+        url: "{{openjdk11_url}}"
+        dest: '/tmp/jdk-{{openjdk11_version}}_linux-x64_bin.tar.gz'
+        checksum: '{{openjdk11_checksum}}'
+    - name: 'Untar OpenJDK {{openjdk11_version}} in /opt/'
+      unarchive:
+        src: '/tmp/jdk-{{openjdk11_version}}_linux-x64_bin.tar.gz'
+        dest: /opt/
+        mode: 0755
+        remote_src: true
+      become: true
+    # - name: 'Check existing Java setup for OpenJDK {{openjdk11_version}}'
+    #   shell: 'echo "" | alternatives --config java'
+    #   register: alt_config_openjdk11_version
+    - name: 'Debug Java Setup'
+      debug:
+        msg: '{{ alt_config_openjdk11_version}}'
+    - name: 'Setup Java master and slave links for OpenJDK {{openjdk11_version}}'
+      command: 'alternatives --install "/usr/bin/java" "java" "/opt/jdk-{{openjdk11_version}}/bin/java" 10 \
+                --slave "/usr/bin/jar" "jar" "/opt/jdk-{{openjdk11_version}}/bin/jar" \
+                --slave "/usr/bin/jarsigner" "jarsigner" "/opt/jdk-{{openjdk11_version}}/bin/jarsigner" \
+                --slave "/usr/bin/javac" "javac" "/opt/jdk-{{openjdk11_version}}/bin/javac" \
+                --slave "/usr/bin/javadoc" "javadoc" "/opt/jdk-{{openjdk11_version}}/bin/javadoc" \
+                --slave "/usr/bin/javah" "javah" "/opt/jdk-{{openjdk11_version}}/bin/javah" \
+                --slave "/usr/bin/javap" "javap" "/opt/jdk-{{openjdk11_version}}/bin/javap" \
+                --slave "/usr/bin/javaws" "javaws" "/opt/jdk-{{openjdk11_version}}/bin/javaws"'
+      when: openjdk11_version not in alt_config_openjdk_version
+      # changed_when: false
+      # when: (alt_config_openjdk11_version.stdout.find(openjdk11_version) == -1)
+      become: true
+
 - name: Set Java path
   set_fact:
     java_path: /usr/lib/jvm/java-1.8.0-openjdk
