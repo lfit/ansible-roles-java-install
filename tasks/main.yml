@@ -17,6 +17,31 @@
         name: javac
         link: /usr/bin/javac
         path: '{{java_path}}/bin/javac'
+    - name: Set jar alternatives
+      alternatives:
+        name: jar
+        link: /usr/bin/jar
+        path: '{{java_path}}/bin/jar'
+    - name: Set jarsigner alternatives
+      alternatives:
+        name: jarsigner
+        link: /usr/bin/jarsigner
+        path: '{{java_path}}/bin/jarsigner'
+    - name: Set javadoc alternatives
+      alternatives:
+        name: javadoc
+        link: /usr/bin/javadoc
+        path: '{{java_path}}/bin/javadoc'
+    - name: Set javap alternatives
+      alternatives:
+        name: javap
+        link: /usr/bin/javap
+        path: '{{java_path}}/bin/javap'
+    - name: Set javah alternatives
+      alternatives:
+        name: javah
+        link: /usr/bin/javah
+        path: '{{java_path}}/bin/javah'
     - name: Set java_sdk_openjdk alternatives
       alternatives:
         name: java_sdk_openjdk

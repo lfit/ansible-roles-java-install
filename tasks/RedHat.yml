@@ -1,3 +1,4 @@
+
 ---
 - name: Install all available Java versions
   yum: name=java-*-openjdk-devel state=latest
