@@ -22,6 +22,30 @@
       "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23a1f186_54ad63d0",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2018-10-12T21:34:02Z",
+      "side": 1,
+      "message": "this is the priority that would can pass",
+      "parentUuid": "f0c5f559_1f413ad7",
+      "range": {
+        "startLine": 46,
+        "startChar": 104,
+        "endLine": 46,
+        "endChar": 106
+      },
+      "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
