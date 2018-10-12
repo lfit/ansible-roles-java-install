@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f0c5f559_1f413ad7",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-10-12T21:30:21Z",
+      "side": 1,
+      "message": "what does this 10 mean?",
+      "range": {
+        "startLine": 46,
+        "startChar": 104,
+        "endLine": 46,
+        "endChar": 106
+      },
+      "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    }
+  ]
+}
