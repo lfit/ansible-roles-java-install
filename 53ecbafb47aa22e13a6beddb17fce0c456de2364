@@ -46,6 +46,29 @@
       "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8127cd5_7c85e236",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-10-16T15:41:21Z",
+      "side": 1,
+      "message": "Do we really need all these slave links?\n\nTypically java alternatives will figure all this out automatically based on the master link to \"java\".\n\nIf we don\u0027t need it then we could use the alternatives module from ansible directly.",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 95
+      },
+      "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
