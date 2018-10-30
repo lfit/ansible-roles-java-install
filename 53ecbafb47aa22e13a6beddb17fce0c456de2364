@@ -69,6 +69,30 @@
       "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f46ce361_d59c1348",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2018-10-30T00:01:17Z",
+      "side": 1,
+      "message": "Andy suggested to go with this approach, maybe Andy can comment here. \n\nI\u0027d some research which suggested its good to use the slave links making it easier to switch all the binaries with a specific version of JDK required. \n\nSadly, the alternative module does not support slave-link yet, there is bug opened on this in the ansible repo.",
+      "parentUuid": "a8127cd5_7c85e236",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 95
+      },
+      "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
