@@ -93,6 +93,30 @@
       "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5f4626b_6c94ac7e",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-11-08T21:55:55Z",
+      "side": 1,
+      "message": "@Thanh, if we don\u0027t have the slaves defined in the alternative declaration then they\u0027ll be null pointed / removed by alternatives when you switch java versions. So, yes, I would say we need to have them all.",
+      "parentUuid": "f46ce361_d59c1348",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 95
+      },
+      "revId": "53ecbafb47aa22e13a6beddb17fce0c456de2364",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
