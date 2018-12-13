@@ -6,6 +6,7 @@
 - name: Install Java 7 SDK
   apt: name=openjdk-7-jdk state=present update_cache=yes
   become: true
+  when: ansible_distribution_version < '18.04'
 
 - name: Install Java 8 SDK
   apt: name=openjdk-8-jdk state=present update_cache=yes
