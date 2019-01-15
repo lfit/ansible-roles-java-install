@@ -46,6 +46,30 @@
       "revId": "f258104dfdfb23085b9f3fc5668f1484e5e382fc",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9925b9f2_4fad38c8",
+        "filename": "tasks/main.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 65
+      },
+      "writtenOn": "2019-01-15T22:14:58Z",
+      "side": 1,
+      "message": "Was introduced in patchset 11",
+      "parentUuid": "a724c4f9_0fbf596a",
+      "range": {
+        "startLine": 25,
+        "startChar": 1,
+        "endLine": 29,
+        "endChar": 38
+      },
+      "revId": "f258104dfdfb23085b9f3fc5668f1484e5e382fc",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
