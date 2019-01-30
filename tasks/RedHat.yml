@@ -1,7 +1,11 @@
 ---
-- name: Install all available Java versions
-  yum: name=java-*-openjdk-devel state=latest
+- name: Install OpenJDK 1.7.0, 1.8.0 and 1.11
+  yum: name={{item}} state=latest
   become: true
+  with_items:
+    - java-1.7.0-openjdk-devel
+    - java-1.8.0-openjdk-devel
+    - java-11-openjdk-devel
 
 - name: Set Java path
   set_fact:
