@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6e45218_8279808d",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2019-01-30T15:05:31Z",
+      "side": 1,
+      "message": "Do not use with_times to install multiple packages.\n\nWith items causes the ansible task to be called X items for each individual item.\n\nModules like YUM actually accept a list directly in the name field and will cause yum to be called exactly once instead being much more efficient and quick. This should instead be written as:\n\n yum:\n   name:\n     - pkg1\n     - pkg2\n     - pkg3\n   state: present",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 13
+      },
+      "revId": "ec561c76411c5084402c6a33b1cea857d6a072be",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    }
+  ]
+}
