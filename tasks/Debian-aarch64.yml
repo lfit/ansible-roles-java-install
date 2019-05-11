@@ -1,5 +1,6 @@
 ---
-- apt_repository:
+- name: Setup openjdk-r/ppa
+  apt_repository:
     repo: 'ppa:openjdk-r/ppa'
   become: true
 
