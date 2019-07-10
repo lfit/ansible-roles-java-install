@@ -22,6 +22,30 @@
       "revId": "414a5a1d44f6bba83ebc4c299e151fb5f63cefdf",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2941d530_a35b7f52",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-07-10T23:16:12Z",
+      "side": 1,
+      "message": "As much as I would love to use UK English and grammar correctly, I\u0027d think using an Oxford comma before \u0027and\u0027 / \u0027or\u0027 is always optional. Also I\u0027d keep the repo 1 byte smaller :P\n\nhttps://www.grammarly.com/blog/what-is-the-oxford-comma-and-why-do-people-care-so-much-about-it/",
+      "parentUuid": "37917d2c_a4fd0e6f",
+      "range": {
+        "startLine": 2,
+        "startChar": 41,
+        "endLine": 2,
+        "endChar": 42
+      },
+      "revId": "414a5a1d44f6bba83ebc4c299e151fb5f63cefdf",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
     }
   ]
 }
