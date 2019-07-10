@@ -1,13 +1,18 @@
 ---
-- name: Install OpenJDK 1.7.0, 1.8.0 and 1.11
+- name: Install Epel Repo
+  package: name=epel-release state=present
+  when: ansible_os_family == "RedHat"
+
+- name: Install OpenJDK 1.7.0, 1.8.0, 1.11 and 1.12
   yum:
     name:
       - java-1.7.0-openjdk-devel
       - java-1.8.0-openjdk-devel
       - java-11-openjdk-devel
+      - java-latest-openjdk-devel
     state: present
   become: true
 
-- name: Set Java path
+- name: Set Java path for OpenJDK 1.8.0
   set_fact:
     java_path: /usr/lib/jvm/java-1.8.0-openjdk
