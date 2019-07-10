@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37917d2c_a4fd0e6f",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2019-07-10T14:01:11Z",
+      "side": 1,
+      "message": "Missing a comma here. I\u0027m a subscriber to the Oxford comma ;)",
+      "range": {
+        "startLine": 2,
+        "startChar": 41,
+        "endLine": 2,
+        "endChar": 42
+      },
+      "revId": "414a5a1d44f6bba83ebc4c299e151fb5f63cefdf",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}
