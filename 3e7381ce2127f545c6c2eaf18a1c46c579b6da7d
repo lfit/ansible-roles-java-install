@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f0e93489_58fd6ec8",
+        "filename": "tox.ini",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 182
+      },
+      "writtenOn": "2019-07-11T01:53:46Z",
+      "side": 1,
+      "message": "what does ~\u003d mean ? I assume it is not the same \u003e?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 23
+      },
+      "revId": "3e7381ce2127f545c6c2eaf18a1c46c579b6da7d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}
