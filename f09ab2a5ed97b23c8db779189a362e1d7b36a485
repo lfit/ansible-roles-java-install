@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cf45fb39_82664823",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 182
+      },
+      "writtenOn": "2019-07-24T23:19:06Z",
+      "side": 1,
+      "message": "Maybe:  -name: Set Java Path for 1.8.0\nIt would be nice info in the build log.",
+      "revId": "f09ab2a5ed97b23c8db779189a362e1d7b36a485",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40b3eadc_a0ffda55",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 182
+      },
+      "writtenOn": "2019-07-24T23:19:06Z",
+      "side": 1,
+      "message": "Maybe:  -name: Set Java Path for 1.8.0\nIt would be nice info in the build log.",
+      "revId": "f09ab2a5ed97b23c8db779189a362e1d7b36a485",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}
