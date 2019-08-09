@@ -4,10 +4,9 @@
     repo: 'ppa:openjdk-r/ppa'
   become: true
 
-- name: Install OpenJDK 1.7.0, 1.8.0, 1.11 and 1.12
+- name: Install OpenJDK 1.8.0, 1.11 and 1.12
   apt:
     name:
-      - openjdk-7-jdk
       - openjdk-8-jdk
       - openjdk-11-jdk
       - openjdk-12-jdk
