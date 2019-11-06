@@ -3,7 +3,7 @@
   package: name=epel-release state=present
   when: ansible_os_family == "RedHat"
 
-- name: Install OpenJDK 1.8.0, 1.11 and 1.12
+- name: Install OpenJDK 1.8.0, 1.11, 1.12 and 1.13
   yum:
     name:
       - java-1.8.0-openjdk-devel
