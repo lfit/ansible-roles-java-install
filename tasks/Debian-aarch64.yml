@@ -4,8 +4,14 @@
     repo: 'ppa:openjdk-r/ppa'
   become: true
 
-- name: Install Java 8 SDK
-  apt: name=openjdk-8-jdk state=present update_cache=yes
+- name: Install OpenJDK 1.8.0, 1.11 and 1.12
+  apt:
+    name:
+      - openjdk-8-jdk
+      - openjdk-11-jdk
+      - openjdk-12-jdk
+    state: present
+    update_cache: 'yes'
   become: true
 
 - name: Set Java path
