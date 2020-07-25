@@ -1,4 +1,5 @@
 # UUID                                                                                   	Group Name
 #
+ceb5911fae56123cd749a7ec9bea6cb74ee23a13                                                 	saml/lf-gerrit-ansible-roles-java-install-committers
 d68d00a2419f8ff627fc120cf9dd9055ae422153                                                 	GitHub Replication
 ldap:cn=lf-gerrit-ansible-roles-java-install-committers,ou=Groups,dc=freestandards,dc=org	ldap/lf-gerrit-ansible-roles-java-install-committers
