@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68ba3372_8044d6c1",
+        "filename": ".pre-commit-config.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 530
+      },
+      "writtenOn": "2022-01-20T13:33:49Z",
+      "side": 1,
+      "message": "I think this is not related to the commit message and should be outsourced in a separate change",
+      "revId": "c6e5382a5d1ee873dd5b9dba630d56e6454a417c",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52d95206_a9f78a78",
+        "filename": "tox.ini",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 530
+      },
+      "writtenOn": "2022-01-20T13:33:49Z",
+      "side": 1,
+      "message": "I\u0027ve never seen this syntax before.\nCould it be a copy/paste error ?",
+      "revId": "c6e5382a5d1ee873dd5b9dba630d56e6454a417c",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
