@@ -1,10 +1,18 @@
 ---
+- name: Install ppa pre-requsites
+  apt:
+    name:
+      - gnupg2
+    state: present
+    update_cache: 'yes'
+  become: true
+
 - name: Setup openjdk-r/ppa
   apt_repository:
     repo: 'ppa:openjdk-r/ppa'
   become: true
 
-- name: Install OpenJDK 1.8.0, 1.11 and 1.12
+- name: Install OpenJDK 1.8.0, 11 and 12
   apt:
     name:
       - openjdk-8-jdk
@@ -13,6 +21,17 @@
     state: present
     update_cache: 'yes'
   become: true
+
+- name: Install OpenJDK 17
+  apt:
+    name:
+      - openjdk-17-jdk
+    state: present
+    update_cache: 'yes'
+  become: true
+  when:
+    - ansible_os_family == "Debian"
+    - ansible_distribution_major_version == "11" or ansible_distribution_version == "20.04"
 
 - name: Set Java path for OpenJDK 1.8.0
   set_fact:
