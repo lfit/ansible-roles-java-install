@@ -10,6 +10,7 @@
       - openjdk-8-jdk
       - openjdk-11-jdk
       - openjdk-12-jdk
+      - openjdk-17-jdk
     state: present
     update_cache: 'yes'
   become: true
