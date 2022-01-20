@@ -4,11 +4,12 @@
   when: ansible_os_family == "RedHat"
   become: true
 
-- name: Install OpenJDK 1.8.0, 1.11 and 1.12
+- name: Install OpenJDK 1.8.0, 1.11, 1.12 and 1.17
   yum:
     name:
       - java-1.8.0-openjdk-devel
       - java-11-openjdk-devel
+      - java-17-openjdk-devel
       - java-latest-openjdk-devel
     state: present
   become: true
@@ -16,3 +17,11 @@
 - name: Set Java path for OpenJDK 1.8.0
   set_fact:
     java_path: /usr/lib/jvm/java-1.8.0-openjdk
+
+- name: Install OpenJDK 1.17
+  yum:
+    name:
+      - java-17-openjdk-devel
+    state: present
+  when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "8"
+  become: true
