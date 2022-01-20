@@ -10,6 +10,7 @@
       - openjdk-8-jdk
       - openjdk-11-jdk
       - openjdk-12-jdk
+      - openjdk-17-jdk
     state: present
     update_cache: 'yes'
   become: true
@@ -17,3 +18,14 @@
 - name: Set Java path for OpenJDK 1.8.0
   set_fact:
     java_path: /usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+- name: Install OpenJDK 1.17
+  apt:
+    name:
+      - openjdk-17-jdk
+    state: present
+    update_cache: 'yes'
+  become: true
+  when:
+    - ansible_os_family == "Debian"
+    - ansible_distribution_major_version == "11" or ansible_distribution_version == "20.04"
