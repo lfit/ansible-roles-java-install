@@ -22,6 +22,30 @@
       },
       "revId": "6c6fc432635a2aa0e98b5ec3c817ed636566516f",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bd6f8db_a95cff8b",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-01-21T06:49:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "18786510_87e3d6da",
+      "range": {
+        "startLine": 34,
+        "startChar": 52,
+        "endLine": 34,
+        "endChar": 91
+      },
+      "revId": "6c6fc432635a2aa0e98b5ec3c817ed636566516f",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
