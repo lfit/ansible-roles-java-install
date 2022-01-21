@@ -24,6 +24,30 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4de57fbf_e88ae734",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-01-21T01:21:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f03cb560_a0d8b9a8",
+      "range": {
+        "startLine": 15,
+        "startChar": 33,
+        "endLine": 15,
+        "endChar": 34
+      },
+      "revId": "b88bdd89a2dd71c4d80215bf507f6db7160a58b2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c9dcaa1_788e96c9",
@@ -41,6 +65,24 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b320c29_4e8c2bc7",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-01-21T01:21:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c9dcaa1_788e96c9",
+      "revId": "b88bdd89a2dd71c4d80215bf507f6db7160a58b2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6c748f7a_ca42f9be",
@@ -54,6 +96,24 @@
       "writtenOn": "2022-01-21T01:02:21Z",
       "side": 1,
       "message": "Extra blank line is causing lint failure.",
+      "revId": "b88bdd89a2dd71c4d80215bf507f6db7160a58b2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5cf0597_4cccf31d",
+        "filename": "tasks/RedHat.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-01-21T01:21:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c748f7a_ca42f9be",
       "revId": "b88bdd89a2dd71c4d80215bf507f6db7160a58b2",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
