@@ -69,6 +69,24 @@
       "parentUuid": "52d95206_a9f78a78",
       "revId": "c6e5382a5d1ee873dd5b9dba630d56e6454a417c",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5d4b495_fa61bada",
+        "filename": "tox.ini",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 530
+      },
+      "writtenOn": "2022-01-21T06:28:35Z",
+      "side": 1,
+      "message": "OK I trust you.",
+      "parentUuid": "f01ac0de_bbcf5453",
+      "revId": "c6e5382a5d1ee873dd5b9dba630d56e6454a417c",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
