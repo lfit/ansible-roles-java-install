@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18786510_87e3d6da",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-01-21T01:36:35Z",
+      "side": 1,
+      "message": "Do we not want this on 18.04? If not, everything looks good to me.",
+      "range": {
+        "startLine": 34,
+        "startChar": 52,
+        "endLine": 34,
+        "endChar": 91
+      },
+      "revId": "6c6fc432635a2aa0e98b5ec3c817ed636566516f",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
