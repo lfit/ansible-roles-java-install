@@ -22,6 +22,30 @@
       },
       "revId": "c833083f1847f6b2bad2bfd5b04bed34f04f9a14",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbb46035_0b40bc7d",
+        "filename": "meta/main.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-06-30T20:43:54Z",
+      "side": 1,
+      "message": "the namespace should be lfit, there is note on the link that says all `-` and `.` will be converted to `_` at runtime.",
+      "parentUuid": "d1bfaf14_3312f7f9",
+      "range": {
+        "startLine": 9,
+        "startChar": 13,
+        "endLine": 9,
+        "endChar": 27
+      },
+      "revId": "c833083f1847f6b2bad2bfd5b04bed34f04f9a14",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
