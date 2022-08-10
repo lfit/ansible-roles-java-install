@@ -4,12 +4,11 @@
   when: ansible_os_family == "RedHat"
   become: true
 
-- name: Install OpenJDK 1.8.0, 11 and 17
+- name: Install OpenJDK 1.8.0, 11
   yum:
     name:
       - java-1.8.0-openjdk-devel
       - java-11-openjdk-devel
-      - java-17-openjdk-devel
       - java-latest-openjdk-devel
     state: present
   become: true
