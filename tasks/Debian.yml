@@ -34,6 +34,6 @@
     - ansible_distribution_major_version == "11" or ansible_distribution_version == "20.04" or
       ansible_distribution_version == "18.04"
 
-- name: Set Java path for OpenJDK 1.8.0
+- name: Set Java path for OpenJDK 11
   set_fact:
-    java_path: /usr/lib/jvm/java-1.8.0-openjdk-amd64
+    java_path: /usr/lib/jvm/java-1.11.0-openjdk-amd64
