@@ -5,7 +5,7 @@
     - '{{ ansible_distribution }}.yml'
     - '{{ ansible_os_family }}.yml'
 
-- name: Set Java 8 as default
+- name: Set default Java
   block:
     - name: Set java alternatives
       alternatives:
@@ -37,11 +37,6 @@
         name: javap
         link: /usr/bin/javap
         path: '{{ java_path }}/bin/javap'
-    - name: Set javah alternatives
-      alternatives:
-        name: javah
-        link: /usr/bin/javah
-        path: '{{ java_path }}/bin/javah'
     - name: Set java_sdk_openjdk alternatives
       alternatives:
         name: java_sdk_openjdk
