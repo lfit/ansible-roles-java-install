@@ -5,7 +5,7 @@
     - '{{ ansible_distribution }}.yml'
     - '{{ ansible_os_family }}.yml'
 
-- name: Set Java 8 as default
+- name: Set default Java
   block:
     - name: Set java alternatives
       alternatives:
