@@ -42,6 +42,6 @@
 
 - name: Set Java path for OpenJDK 11 (arm)
   set_fact:
-    java_path: /usr/lib/jvm/java-1.110-openjdk-arm64
+    java_path: /usr/lib/jvm/java-1.11.0-openjdk-arm64
   when:
     - ansible_architecture == "aarch64"
