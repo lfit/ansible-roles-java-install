@@ -9,14 +9,14 @@
     name:
       - java-1.8.0-openjdk-devel
       - java-11-openjdk-devel
-      - java-latest-openjdk-devel
     state: present
   become: true
 
-- name: Install OpenJDK 17
+- name: Install OpenJDK 17, latest
   yum:
     name:
       - java-17-openjdk-devel
+      - java-latest-openjdk-devel
     state: present
   when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "8"
   become: true
