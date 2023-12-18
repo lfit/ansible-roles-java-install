@@ -11,11 +11,15 @@ platforms:
   - name: centos7
     image: centos:7
   - name: centos8
-    image: quay.io/pycontribs/centos:stream8
+    image: quay.io/centos/centos:stream8
+  - name: centos9
+    image: quay.io/centos/centos:stream9
   - name: ubuntu1804
     image: ubuntu:18.04
   - name: ubuntu2004
     image: ubuntu:20.04
+  - name: ubuntu2204
+    image: ubuntu:22.04
 provisioner:
   name: ansible
 scenario:
