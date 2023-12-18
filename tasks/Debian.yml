@@ -40,6 +40,19 @@
     - ansible_distribution_major_version == "11" or ansible_distribution_version == "20.04" or
       ansible_distribution_version == "18.04"
 
+- name: Install OpenJDK 21
+  apt:
+    name:
+      - openjdk-21-jdk
+    state: present
+    update_cache: 'yes'
+  become: true
+  when:
+    - ansible_os_family == "Debian"
+    - ansible_distribution_major_version == "13" or ansible_distribution_version == "20.04" or
+      ansible_distribution_version == "22.04"
+
+
 - name: Set Java path for OpenJDK 11 (non-arm)
   ansible.builtin.set_fact:
     java_path: /usr/lib/jvm/java-1.11.0-openjdk-amd64
