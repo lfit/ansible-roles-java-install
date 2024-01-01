@@ -1,0 +1,7 @@
+Verified+1: Jenkins CI <releng+lf-jenkins@linuxfoundation.org>
+Code-Review+2: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-by: Anil Belur <abelur@linuxfoundation.org>
+Submitted-at: Mon, 01 Jan 2024 23:05:15 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/c/ansible/roles/java-install/+/72484
+Project: ansible/roles/java-install
+Branch: refs/heads/master
