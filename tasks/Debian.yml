@@ -11,6 +11,10 @@
   apt_repository:
     repo: 'ppa:openjdk-r/ppa'
   become: true
+  register: task_result
+  until: task_result is success
+  retries: 3
+  delay: 10
 
 - name: Install OpenJDK 1.8.0, 11 and 12
   apt:
