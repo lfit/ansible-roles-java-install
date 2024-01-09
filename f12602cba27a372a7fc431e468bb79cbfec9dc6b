@@ -16,6 +16,24 @@
       "message": "Just an FYI given how this workflow is written it is never going to get triggered for open changes. It will only fire after something has been merged and is then replicated to the GitHub mirror.\n\nIt really should be rewritten to be a Gerrit verify job",
       "revId": "f12602cba27a372a7fc431e468bb79cbfec9dc6b",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a572bd8a_10d7872a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-01-09T21:33:02Z",
+      "side": 1,
+      "message": "Here is the correct gerrit version you should be reviewing.\n\nhttps://gerrit.linuxfoundation.org/infra/c/ansible/roles/java-install/+/72512/1/.github/workflows/gerrit-verify.yaml",
+      "parentUuid": "cb21af30_ad047882",
+      "revId": "f12602cba27a372a7fc431e468bb79cbfec9dc6b",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ],
   "submitRequirementResults": [
