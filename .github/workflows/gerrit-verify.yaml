@@ -94,7 +94,7 @@ jobs:
       - name: Run static analysis and format checkers
         run: pipx run pre-commit run --all-files --show-diff-on-failure
 
-  molecule:
+  molecule-run:
     needs: prepare
     name: Molecule
     runs-on: ubuntu-latest
@@ -125,22 +125,6 @@ jobs:
           ANSIBLE_FORCE_COLOR: "1"
           MOLECULE_DISTRO: ${{ matrix.distro }}
 
-  tox-verify:
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lfit/checkout-gerrit-change-action@v0.4
-        with:
-          gerrit-refspec: ${{ inputs.GERRIT_REFSPEC }}
-          delay: "0s"
-      - uses: actions/setup-python@v4
-        id: setup-python
-        with:
-          python-version: "3.11"
-      - name: Run tox
-        run: >-
-          pipx run tox
-
   vote:
     if: ${{ always() }}
     needs:
@@ -148,7 +132,7 @@ jobs:
         prepare,
         actionlint,
         pre-commit,
-        tox-verify,
+        molecule-run,
       ]
     runs-on: ubuntu-latest
     steps:
