@@ -1,0 +1,8 @@
+Verified+1: Jenkins CI <releng+lf-jenkins@linuxfoundation.org>
+Code-Review+2: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Verified+1: LFIT Required GHA <releng+lfit-required-gha@linuxfoundation.org>
+Submitted-by: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-at: Thu, 18 Jan 2024 15:06:31 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/c/ansible/roles/java-install/+/72559
+Project: ansible/roles/java-install
+Branch: refs/heads/master
