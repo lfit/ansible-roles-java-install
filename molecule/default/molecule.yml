@@ -20,6 +20,8 @@ platforms:
     image: ubuntu:20.04
 provisioner:
   name: ansible
+  env:
+    ANSIBLE_ROLES_PATH: "${MOLECULE_PROJECT_DIRECTORY}/.."
 scenario:
   name: default
 verifier:
