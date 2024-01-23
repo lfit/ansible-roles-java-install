@@ -2,4 +2,4 @@
 - name: Converge
   hosts: all
   roles:
-    - role: java-install
+    - role: ansible-roles-java-install
