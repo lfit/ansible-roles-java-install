@@ -1,6 +1,6 @@
 ---
 - name: Install ppa pre-requsites
-  apt:
+  ansible.builtin.package:
     name:
       - gnupg2
     state: present
@@ -8,7 +8,7 @@
   become: true
 
 - name: Setup openjdk-r/ppa
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: 'ppa:openjdk-r/ppa'
   become: true
   register: task_result
@@ -17,7 +17,7 @@
   delay: 10
 
 - name: Install OpenJDK 1.8.0, 11 and 12
-  apt:
+  ansible.builtin.package:
     name:
       - openjdk-8-jdk
       - openjdk-11-jdk
@@ -27,7 +27,7 @@
   become: true
 
 - name: Install OpenJDK 17
-  apt:
+  ansible.builtin.package:
     name:
       - openjdk-17-jdk
     state: present
@@ -39,13 +39,13 @@
       ansible_distribution_version == "18.04"
 
 - name: Set Java path for OpenJDK 11 (non-arm)
-  set_fact:
+  ansible.builtin.set_fact:
     java_path: /usr/lib/jvm/java-1.11.0-openjdk-amd64
   when:
     - ansible_architecture != "aarch64"
 
 - name: Set Java path for OpenJDK 11 (arm)
-  set_fact:
+  ansible.builtin.set_fact:
     java_path: /usr/lib/jvm/java-1.11.0-openjdk-arm64
   when:
     - ansible_architecture == "aarch64"
