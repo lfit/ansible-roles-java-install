@@ -1,45 +1,46 @@
 ---
-- include_tasks: '{{ item }}'
+- name: Install JDK for {{ ansible_os_family }}
+  ansible.builtin.include_tasks: '{{ item }}'
   with_first_found:
     - '{{ ansible_os_family }}-{{ ansible_architecture }}.yml'
     - '{{ ansible_distribution }}.yml'
     - '{{ ansible_os_family }}.yml'
 
 - name: Set default Java
+  become: true
   block:
     - name: Set java alternatives
-      alternatives:
+      community.general.alternatives:
         name: java
         link: /usr/bin/java
         path: '{{ java_path }}/bin/java'
     - name: Set javac alternatives
-      alternatives:
+      community.general.alternatives:
         name: javac
         link: /usr/bin/javac
         path: '{{ java_path }}/bin/javac'
     - name: Set jar alternatives
-      alternatives:
+      community.general.alternatives:
         name: jar
         link: /usr/bin/jar
         path: '{{ java_path }}/bin/jar'
     - name: Set jarsigner alternatives
-      alternatives:
+      community.general.alternatives:
         name: jarsigner
         link: /usr/bin/jarsigner
         path: '{{ java_path }}/bin/jarsigner'
     - name: Set javadoc alternatives
-      alternatives:
+      community.general.alternatives:
         name: javadoc
         link: /usr/bin/javadoc
         path: '{{ java_path }}/bin/javadoc'
     - name: Set javap alternatives
-      alternatives:
+      community.general.alternatives:
         name: javap
         link: /usr/bin/javap
         path: '{{ java_path }}/bin/javap'
     - name: Set java_sdk_openjdk alternatives
-      alternatives:
+      community.general.alternatives:
         name: java_sdk_openjdk
         link: /usr/lib/jvm/java-openjdk
         path: '{{ java_path }}/bin/java'
-  become: true

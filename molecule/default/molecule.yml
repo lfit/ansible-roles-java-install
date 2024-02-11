@@ -3,10 +3,6 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint: |
-  set -e
-  yamllint .
-  ansible-lint tasks/*.yml
 platforms:
   - name: centos7
     image: centos:7
