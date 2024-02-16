@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7be6ee2_98c328e8",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2024-02-16T23:59:43Z",
+      "side": 1,
+      "message": "This step isn\u0027t working on Ubuntu 22.04. Looks like Java 11 isn\u0027t in its packages at all. But I believe this should be updated to jdk17 anyway at this point.",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 39
+      },
+      "revId": "2adfe810e0197ae5cad749a50a8e63a9355ff489",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
