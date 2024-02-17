@@ -22,6 +22,30 @@
       },
       "revId": "2adfe810e0197ae5cad749a50a8e63a9355ff489",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55c1e63b_1027b66f",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-17T01:33:17Z",
+      "side": 1,
+      "message": "Openjdk-21 package for Ubuntu 22.04 is in the -proposed repositories and not available when I submitted the fix for CentOS9 a few month ago, will be added once available.",
+      "parentUuid": "c7be6ee2_98c328e8",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 39
+      },
+      "revId": "2adfe810e0197ae5cad749a50a8e63a9355ff489",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
