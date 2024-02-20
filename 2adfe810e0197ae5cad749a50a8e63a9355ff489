@@ -46,6 +46,30 @@
       },
       "revId": "2adfe810e0197ae5cad749a50a8e63a9355ff489",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e74fd789_cadf413c",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2024-02-20T22:21:32Z",
+      "side": 1,
+      "message": "I didn\u0027t mention Openjdk-21. This is installing jdk 11, and I believe it should be 17 instead. Or it needs to be distro/version-specific, so that it works where jdk 11 is not available (Ubuntu 22.04).",
+      "parentUuid": "55c1e63b_1027b66f",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 39
+      },
+      "revId": "2adfe810e0197ae5cad749a50a8e63a9355ff489",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
