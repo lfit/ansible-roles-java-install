@@ -70,6 +70,30 @@
       },
       "revId": "2adfe810e0197ae5cad749a50a8e63a9355ff489",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2cd770f3_340d2ff5",
+        "filename": "tasks/Debian.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-20T22:35:30Z",
+      "side": 1,
+      "message": "I think we can keep jdk11 and add a condition to exclude ubuntu 22.04. I know some sub-projects are still not migrated off jdk11.",
+      "parentUuid": "e74fd789_cadf413c",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 39
+      },
+      "revId": "2adfe810e0197ae5cad749a50a8e63a9355ff489",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
