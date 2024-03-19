@@ -30,7 +30,7 @@
       - java-21-openjdk-devel
       - java-latest-openjdk-devel
     state: present
-  when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "9"
+  when: ansible_os_family == "RedHat" and ansible_distribution_major_version >= "8"
   become: true
 
 - name: Set Java path for OpenJDK 11
