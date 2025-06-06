@@ -48,8 +48,7 @@
   become: true
   when:
     - ansible_os_family == "Debian"
-    - ansible_distribution_major_version == "13" or ansible_distribution_version == "20.04" or
-      ansible_distribution_version == "22.04"
+    - ansible_distribution_major_version == "13" or ansible_distribution_version >= "20.04"
 
 - name: Set Java path for OpenJDK 11 (non-arm)
   ansible.builtin.set_fact:

@@ -16,6 +16,8 @@ platforms:
     image: ubuntu:20.04
   - name: ubuntu2204
     image: ubuntu:22.04
+  - name: ubuntu2404
+    image: ubuntu:24.04
 provisioner:
   name: ansible
   # Fix for role path finding in latest molecule versions (~25.4.0)
