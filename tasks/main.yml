@@ -1,5 +1,5 @@
 ---
-- name: Install JDK for {{ ansible_os_family }}
+- name: Install JDK
   ansible.builtin.include_tasks: '{{ item }}'
   with_first_found:
     - '{{ ansible_os_family }}-{{ ansible_architecture }}.yml'
