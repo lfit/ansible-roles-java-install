@@ -14,6 +14,7 @@
       - java-11-openjdk-devel
     state: present
   become: true
+  when: ansible_facts['distribution_major_version'] | int <= 8
 
 - name: Install OpenJDK 17, latest
   ansible.builtin.yum:
@@ -21,7 +22,9 @@
       - java-17-openjdk-devel
       - java-latest-openjdk-devel
     state: present
-  when: ansible_facts['os_family'] == "RedHat" and ansible_facts['distribution_major_version'] == "8"
+  when:
+    - ansible_facts['os_family'] == "RedHat"
+    - ansible_facts['distribution_major_version'] | int == 8
   become: true
 
 - name: Install OpenJDK 21, latest
@@ -30,7 +33,9 @@
       - java-21-openjdk-devel
       - java-latest-openjdk-devel
     state: present
-  when: ansible_facts['os_family'] == "RedHat" and ansible_facts['distribution_major_version'] is version('9', '>=')
+  when:
+    - ansible_facts['os_family'] == "RedHat"
+    - ansible_facts['distribution_major_version'] | int >= 9
   become: true
 
 - name: Set Java path for OpenJDK 11
