@@ -15,6 +15,7 @@
   until: task_result is success
   retries: 3
   delay: 10
+  when: ansible_facts['distribution_version'] is version('24.04', '<')
 
 - name: Install OpenJDK 1.8.0, 11 and 12
   ansible.builtin.package:
@@ -26,7 +27,7 @@
     update_cache: 'yes'
   become: true
   when:
-    - ansible_os_family == 'Debian' and ansible_facts['distribution_major_version'] is version('20.04', '<=')
+    - ansible_facts['os_family'] == 'Debian' and ansible_facts['distribution_version'] is version('20.04', '<=')
 
 - name: Install OpenJDK 17
   ansible.builtin.package:
@@ -36,8 +37,8 @@
     update_cache: 'yes'
   become: true
   when:
-    - ansible_os_family == "Debian"
-    - ansible_distribution_major_version == "11" or ansible_distribution_version >= "18.04"
+    - ansible_facts['os_family'] == "Debian"
+    - ansible_facts['distribution_major_version'] == "11" or ansible_facts['distribution_version'] is version('18.04', '>=')
 
 - name: Install OpenJDK 21
   apt:
@@ -47,25 +48,26 @@
     update_cache: 'yes'
   become: true
   when:
-    - ansible_os_family == "Debian"
-    - ansible_distribution_major_version == "13" or ansible_distribution_version >= "20.04"
+    - ansible_facts['os_family'] == "Debian"
+    - ansible_facts['distribution_major_version'] == "13" or ansible_facts['distribution_version'] is version('20.04', '>=')
 
 - name: Set Java path for OpenJDK 11 (non-arm)
   ansible.builtin.set_fact:
     java_path: /usr/lib/jvm/java-1.11.0-openjdk-amd64
   when:
-    - ansible_architecture != "aarch64"
-    - ansible_os_family == 'Debian' and ansible_facts['distribution_major_version'] is version('20.04', '<=')
+    - ansible_facts['architecture'] != "aarch64"
+    - ansible_facts['os_family'] == 'Debian' and ansible_facts['distribution_version'] is version('20.04', '<=')
 
 - name: Set Java path for OpenJDK 11 (arm)
   ansible.builtin.set_fact:
     java_path: /usr/lib/jvm/java-1.11.0-openjdk-arm64
   when:
-    - ansible_architecture == "aarch64"
+    - ansible_facts['architecture'] == "aarch64"
+    - ansible_facts['os_family'] == 'Debian' and ansible_facts['distribution_version'] is version('20.04', '<=')
 
 - name: Set Java path for OpenJDK 21 (non-arm)
   ansible.builtin.set_fact:
     java_path: /usr/lib/jvm/java-1.21.0-openjdk-amd64
   when:
-    - ansible_architecture != "aarch64"
-    - ansible_os_family == 'Debian' and ansible_facts['distribution_major_version'] is version('20.04', '>=')
+    - ansible_facts['architecture'] != "aarch64"
+    - ansible_facts['os_family'] == 'Debian' and ansible_facts['distribution_version'] is version('20.04', '>=')

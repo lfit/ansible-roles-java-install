@@ -4,6 +4,9 @@ dependency:
 driver:
   name: podman
 platforms:
+  - name: centos9
+    image: quay.io/centos/centos:stream9
+    pre_build_image: false
   - name: ubuntu2204
     image: ubuntu:22.04
     pre_build_image: false
@@ -12,13 +15,29 @@ platforms:
     pre_build_image: false
 provisioner:
   name: ansible
-  env:
-    ANSIBLE_CONFIG: ${MOLECULE_PROJECT_DIRECTORY}/ansible.cfg
+  config_options:
+    defaults:
+      callbacks_enabled: profile_tasks
+      inject_facts_as_vars: false
   inventory:
     host_vars:
+      centos9:
+        ansible_python_interpreter: /usr/bin/python3
       ubuntu2204:
         ansible_python_interpreter: /usr/bin/python3
       ubuntu2404:
         ansible_python_interpreter: /usr/bin/python3
+scenario:
+  name: default
+  test_sequence:
+    - destroy
+    - dependency
+    - syntax
+    - create
+    - prepare
+    - converge
+    - side_effect
+    - verify
+    - destroy
 verifier:
   name: ansible
