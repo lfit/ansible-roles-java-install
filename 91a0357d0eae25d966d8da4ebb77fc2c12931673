@@ -1,0 +1,7 @@
+Code-Review+2: Anil Belur <abelur@linuxfoundation.org>
+Verified+1: LFIT Required GHA <releng+lfit-required-gha@linuxfoundation.org>
+Submitted-by: Anil Belur <abelur@linuxfoundation.org>
+Submitted-at: Mon, 29 Dec 2025 01:11:29 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/c/ansible/roles/java-install/+/74024
+Project: ansible/roles/java-install
+Branch: refs/heads/master
