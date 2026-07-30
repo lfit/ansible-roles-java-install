@@ -4,3 +4,7 @@
   tasks:
     - name: Check java version
       shell: "java -version"
+
+    - name: Check SDKMAN JVM toolchain version selection
+      ansible.builtin.script: ../../files/install-jvm-toolchain.sh --self-check
+      changed_when: false

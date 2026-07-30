@@ -1,2 +1,7 @@
 ---
 # defaults file for java-install
+
+# Install the JVM toolchain (JDKs, Maven, mvnd) via SDKMAN! instead of relying
+# on distro packages. Opt-in: adds roughly 2GB to the image.
+java_sdkman_install: false
+java_sdkman_dir: /opt/sdkman

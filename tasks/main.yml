@@ -6,6 +6,25 @@
     - '{{ ansible_facts["distribution"] }}.yml'
     - '{{ ansible_facts["os_family"] }}.yml'
 
+- name: Install JVM toolchain via SDKMAN!
+  when: java_sdkman_install | bool
+  become: true
+  block:
+    - name: Install SDKMAN! prerequisites
+      ansible.builtin.package:
+        name:
+          - curl
+          - unzip
+          - zip
+        state: present
+        update_cache: 'yes'
+
+    - name: Install JDKs, Maven and mvnd via SDKMAN!
+      ansible.builtin.script: install-jvm-toolchain.sh
+      environment:
+        SDKMAN_DIR: '{{ java_sdkman_dir }}'
+      changed_when: true
+
 - name: Set default Java
   become: true
   block:
