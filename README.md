@@ -11,7 +11,15 @@ None.
 Role Variables
 --------------
 
-None.
+:java_sdkman_install: Install the JVM toolchain (JDKs, Maven and mvnd) with
+    SDKMAN! in addition to the distribution packages. Versions resolve from
+    the SDKMAN! broker API when the image is built, so the toolchain is not
+    tied to a distribution release. Adds roughly 2GB to the image.
+    (default: ``false``)
+:java_sdkman_dir: Directory SDKMAN! installs into. (default: ``/opt/sdkman``)
+
+The distribution JDK stays the system default. Jenkins jobs opt in to a
+SDKMAN! JDK per job by setting ``JDK_PROVIDER=sdkman``.
 
 Dependencies
 ------------
